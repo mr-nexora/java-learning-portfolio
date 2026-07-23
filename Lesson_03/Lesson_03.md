@@ -1,12 +1,22 @@
-# Variables and Data Types
+# ☕ L03: Variables & Data Types
 
-## Java Variables
+Welcome to the third lesson of your Java journey! In this comprehensive guide, we will dive deep into how data is stored, categorized, and named in Java using **Variables**, **Data Types**, **Identifiers**, and the modern **`var` Keyword**.
+
+---
+
+## 📖 1. Java Variables
+
+A **variable** is a container (a dedicated memory location) that holds a value while a Java program is running. Every variable in Java must be declared with a specific data type before it can be used.
+
+### The Declaration Syntax
 
 ```syntax
 type variableName = value;
 ```
 
 #### String Variables
+
+Used to store text. String values must be surrounded by double quotes ("...").
 
 ```java
     // test1.java
@@ -18,6 +28,8 @@ type variableName = value;
 
 #### Int Variables
 
+Used to store whole numbers without decimals (positive or negative).
+
 ```java
     // test1.java
     int myAge = 23;
@@ -27,6 +39,10 @@ type variableName = value;
 ![Output](img/1.2.jpg)
 
 #### Float Variables
+
+Used to store fractional numbers containing decimals.
+
+> ⚠️ Crucial Rule: You must append the letter f or F at the end of the literal value to tell the compiler it's a float, not a double.
 
 ```java
     // test1.java
@@ -38,6 +54,8 @@ type variableName = value;
 
 #### Char Variables
 
+Used to store a single character. Char values must be enclosed in single quotes ('...').
+
 ```java
     // test1.java
     char myGrade = 'A';
@@ -47,6 +65,8 @@ type variableName = value;
 ![Output](img/1.4.jpg)
 
 #### Boolean Variables
+
+Used to store conditional states: either true or false.
 
 ```java
     // test1.java
@@ -59,6 +79,8 @@ type variableName = value;
 ## ![Output](img/1.5.jpg)
 
 #### Final Variables
+
+If you don't want others (or yourself) to overwrite existing variable values, prefix the declaration with the final keyword. This turns the variable into a constant, making it unchangeable and read-only.
 
 ```java
     // test2.java
@@ -73,6 +95,8 @@ type variableName = value;
 ### Java Print Variables
 
 #### Display Variables
+
+The + operator can be used to join (concatenate) strings together, or attach variables to regular text layouts during output.
 
 ```java
     // test3.java
@@ -95,11 +119,13 @@ type variableName = value;
 
 ### Java Declare Multiple Variables
 
+Java allows you to declare multiple variables of the same type in a single line by separating them with commas.
+
 #### Declare Many Variables
 
 ```java
     // test4.java
-    int p = 3;
+        int p = 3;
         int q = 5;
         int r = 10;
         int sum = p+q+r;
@@ -110,6 +136,8 @@ type variableName = value;
 ![Output](img/4.1.jpg)
 
 ### One Value to Multiple Variables
+
+You can assign the exact same value to multiple variables across a single statement block using sequential assignment chained together.
 
 ```java
     // test5.java
@@ -124,7 +152,14 @@ type variableName = value;
 
 ### Identifiers
 
+All Java variables must be identified with unique names. These unique names are called Identifiers.
+
+#### Best Practices: Descriptive Names
+
+Always use descriptive names to create self-documenting, maintainable code configurations.
+
 ```java
+    // test6.java
      // Good
         int minutesPerHour = 60;
 
@@ -136,7 +171,13 @@ type variableName = value;
 
 #### Invalid Identifiers
 
+    - Identifiers can contain letters, digits, underscores, and dollar signs.
+    - Identifiers must begin with a letter, $, or _ (Cannot begin with a digit).
+    - Identifiers cannot contain whitespace gaps.
+    - Identifiers cannot be Java reserved keywords (like int, class, final).
+
 ```java
+    // test7.java
     int 3rdNumber = 10;
     int my num = 15;
     int int = 40;
@@ -145,9 +186,17 @@ type variableName = value;
 ![Output](img/6.jpg)
 
 ---
+
 ## Java Data Types
 
+Data types in Java are divided into two primary groups:
+
+Primitive Data Types: Includes byte, short, int, long, float, double, boolean, and char. These predefined types store basic, raw values directly.
+
+Non-Primitive Data Types: Includes String, Arrays, and Classes (we will explore these later).
+
 ```java
+    // test8.java
     int myNum = 5; // Integer (whole number)
     float myFloatNum = 5.99f; // Floating point number
     char myLetter = 'D'; // Character
@@ -157,19 +206,12 @@ type variableName = value;
 
 ![Output](img/7.jpg)
 
-### Primitive Data Types
-
-    - byte
-    - short
-    - int
-    - long
-    - float
-    - double boolean
-    - char
-
 ### The var Keyword
 
+Introduced in Java 10, the var keyword allows you to omit explicit type declarations. The compiler automatically infers (guesses) the correct data type based on the value assigned to it at compile time.
+
 ```java
+    // test9.java
     var myNum = 5; // Integer (whole number)
     var myFloatNum = 5.99f; // Floating point number
     var myLetter = 'D'; // Character
@@ -180,20 +222,52 @@ type variableName = value;
 ![Output](img/8.jpg)
 
 #### Important Notes
-1. var only works when you assign a value at the same time (you can't declare var x; without assigning a value):
+
+Immediate Initialization Required: You cannot declare a var without assigning a value at the exact same time. The compiler needs the value to figure out the type.
 
 ```java
 var x; // Error
 var x = 5;  // OK
 ```
-2. Once the type is chosen, it stays the same. See example below:
+
+Strict Static Typing: Once the compiler determines the type of a var variable, it is locked into that type permanently. You cannot change its data type later in the script execution.
 
 ```java
 var x = 5;  // x is now an int
 x = 10;     // OK - still an int
 x = 9.99;   // Error - can't assign a double to an int
 ```
+
 ## Type Casting
+
+Type casting occurs when you assign a value of one primitive data type to another type. In Java, there are two distinct types of casting configurations: **Widening Casting (Automatically)** and **Narrowing Casting (Manually)**.
+
+---
+
+## 🗺️ Type Casting Overview
+
+```syntax
+Widening (Auto): byte -> short -> char -> int -> long -> float -> double
+Narrowing (Manual): double -> float -> long -> int -> char -> short -> byte
+```
+1. Widening Casting (Automatic Conversion)
+Widening casting happens automatically when you pass a smaller size type to a larger size type container. Since the destination container is larger, there is no risk of data loss.
+
+```java
+    // test10.java
+        int myInt = 9;
+        
+        // Automatic casting: int to double
+        double myDouble = myInt; 
+```
+![Output](img/9.1.jpg)
+
+2. Narrowing Casting (Manual Conversion)
+Narrowing casting must be done manually by placing the target type in parentheses () in front of the value. This is used when passing a larger size type to a smaller size type.
+
+⚠️ Crucial Note: Narrowing casting can result in data loss or precision loss (for example, converting 9.99 to an int will completely truncate the decimals, leaving just 9).
+
+![Output](img/9.2.jpg)
 
 ---
 
