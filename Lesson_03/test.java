@@ -1,6 +1,6 @@
 package Lesson_03;
 
-public class test8 {
+public class test9 {
     public static void main(String[] args) {
 
         // The Var Keyword
