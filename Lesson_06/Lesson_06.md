@@ -1,6 +1,119 @@
+<div align="center">
+
+# 🚀 Java Learning Portfolio
+
+### Building My Full Stack Development Journey, One Lesson at a Time.
+
+<img src="https://img.shields.io/badge/Status-In%20Progress-00C853?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Lessons-15%2B-2196F3?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Language-JAVA-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
+
+<br><br>
+
+<a href="https://github.com/mr-nexora">
+<img src="https://img.shields.io/badge/GitHub-mr--nexora-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="https://www.linkedin.com/in/mrnexora/">
+<img src="https://img.shields.io/badge/LinkedIn-Sahan%20Udara-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="https://mr-nexora.github.io/mr-nexora-personal-portfolio/">
+<img src="https://img.shields.io/badge/Portfolio-Visit%20Website-6C63FF?style=for-the-badge&logo=googlechrome&logoColor=white"/>
+</a>
+
+</div>
+
+---
+
+# 👋 Welcome
+
+Welcome to my **Java Learning Repository**.
+
+## This repository documents my complete learning journey in Java as part of my Full Stack Development roadmap. Every lesson includes well-organized source code, explanations, screenshots, practice exercises, and mini projects to strengthen my object-oriented programming, problem-solving, and application development skills.
+
+# 📂 Repository Overview
+
+| 📌 Information        | Details                                    |
+| :-------------------- | :----------------------------------------- |
+| 👨‍💻 Author             | **T.M.S.U. Thennakoon (Sahan Udara)**      |
+| 🎓 Program            | Computer Science Undergraduate             |
+| 💻 Technology         | Java                                       |
+| 📚 Learning Method    | Daily Lessons & Hands-on Practice          |
+| 🎯 Goal               | Become a Professional Full Stack Developer |
+| 📅 Repository Started | 2026                                       |
+
+---
+
+# ✨ What's Inside
+
+- 📖 Structured Lessons
+- 💻 Source Code
+- 📷 Output Screenshots
+- 📝 Markdown Notes
+- 🚀 Mini Projects
+- 📚 Practice Exercises
+- 📈 Continuous Progress Updates
+
+---
+
+# 🌍 Connect With Me
+
+<div align="center">
+
+<a href="https://github.com/mr-nexora">
+<img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github"/>
+</a>
+
+<a href="https://www.linkedin.com/in/mrnexora/">
+<img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin"/>
+</a>
+
+<a href="https://mr-nexora.github.io/mr-nexora-personal-portfolio/">
+<img src="https://img.shields.io/badge/Portfolio-Visit-6C63FF?style=for-the-badge&logo=googlechrome"/>
+</a>
+
+</div>
+
+---
+
+# 📚 Learning Resources
+
+This repository is built through continuous practice using educational resources such as:
+
+- W3Schools
+- MDN Web Docs
+- freeCodeCamp
+
+---
+
+# ⚖️ Copyright
+
+> **© 2026 T.M.S.U. Thennakoon (Sahan Udara). All Rights Reserved.**
+>
+> This repository has been created for educational, portfolio, and personal learning purposes.
+>
+> You are welcome to explore the code and learn from it. However, copying, redistributing, or presenting this work as your own without permission is not allowed.
+
+---
+
+<div align="center">
+
+⭐ If you find this repository useful, consider giving it a Star.
+
+Happy Coding! 🚀
+
+</div>
+
+---
+
 # Booleans and Decision Making
 
+Conditional logic allows Java programs to make decisions based on changing conditions. This section covers **Boolean expressions**, conditional statements (**`if`**, **`else`**, **`else if`**), the **ternary operator**, **nested conditions**, and the **`switch`** statement.
+
 ## Java Booleans
+
+A Java boolean data type can only take one of two values: `true` or `false`. They are most commonly evaluated using comparison and logical operators.
 
 ```java
     int x = 10;
@@ -23,7 +136,17 @@
 
 ## Java If...Else
 
+- Java supports standard logical conditions:
+- Less than: a < b
+- Less than or equal to: a <= b
+- Greater than: a > b
+- Greater than or equal to: a >= b
+- Equal to: a == b
+- Not Equal to: a != b
+
 ### if Statement
+
+Executes a block of Java code only if a specified condition evaluates to `true`.
 
 ```syntax
 if (condition) {
@@ -43,6 +166,8 @@ if (condition) {
 ![Output](img/2.1.jpg)
 
 ### else Statement
+
+Executes a block of Java code if the same condition evaluates to `false`.
 
 ```syntax
 if (condition) {
@@ -64,6 +189,8 @@ if (condition) {
 ![Output](img/2.2.jpg)
 
 ### else if Statement
+
+Specifies a new condition to test if the first condition evaluates to `false`.
 
 ```syntax
 if (condition1) {
@@ -97,6 +224,8 @@ if (condition1) {
 
 ### Short Hand if - else Statement
 
+The ternary operator consists of three operands and is used as a concise alternative to simple `if...else` blocks.
+
 ```syntax
 variable = (condition) ? expressionTrue: expressionFalse;
 ```
@@ -113,6 +242,8 @@ variable = (condition) ? expressionTrue: expressionFalse;
 
 #### Nested Ternary
 
+Multiple conditions can be chained sequentially using ternary expressions.
+
 ```java
     // test6.java
     int time = 20;
@@ -126,6 +257,8 @@ variable = (condition) ? expressionTrue: expressionFalse;
 ![Output](img/2.5.jpg)
 
 ### Nested if Statement
+
+You can include an `if` block inside another `if` or `else` block to check multiple dependent layer conditions.
 
 ```syntax
 if (condition1) {
@@ -158,6 +291,9 @@ if (condition2) {
 ## ![Output](img/2.6.jpg)
 
 ## Java Switch
+
+Use the `switch` statement to select one of many code blocks to be executed based on matching values.
+
 ```syntax
     switch(expression) {
     case x:
@@ -170,6 +306,7 @@ if (condition2) {
         // code block
     }
 ```
+
 ```java
     // test8.java
     int dayNo = 2;
@@ -200,17 +337,3 @@ if (condition2) {
                 System.out.println("Please add the vaild Input");
         }
 ```
-## ![Output](img/3.jpg)
----
-
-## ⚖️ Copyright & Licensing
-
-**Copyright © 2026 T.M.S.U. Thennakoon (Sahan Udara). All rights reserved.**
-
-This documentation, code implementations, structured syllabus, and associated assets are part of the **Java Zero to Hero** learning roadmap, independently curated, structured, and maintained by **Sahan Udara (Mr. Nexora)** under the umbrella brand **SU Nexora**.
-
-- **Author Profiles:** [GitHub](https://github.com/mr-nexora) | [LinkedIn](https://www.linkedin.com/in/mrnexora/)
-- **Permitted Use:** This material is strictly intended for personal education, reference, and open-source project showcasing. You are welcome to study, reference, and fork this repository for non-commercial educational purposes.
-- **Restrictions:** Unauthorized duplication, plagiarism, re-hosting, or redistribution of these compiled notes, structural curriculum design, and step-by-step explanations on other websites, courses, or commercial media without explicit prior written consent from the author is strictly prohibited.
-
-_All structural updates, code solutions, and verified execution screenshots belong to the author's personal portfolio assets._
